@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>spotify - Your Music, Your Vibe</title>
+  <link rel="stylesheet" href="spotify.css"/>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous"
+  />
+</head>
+<body class="dark-mode">
+  <div class="topbar">
+    <div class="left">
+      <i class="fa-solid fa-music logo"></i>
+      <span class="brand-name">Spotify</span>
+      <div class="search-bar">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="What do you want to play?" />
+      </div>
+    </div>
+    <div class="right">
+      <a href="#">Premium</a>
+      <a href="#">Support</a>
+      <a href="#">Download</a>
+      <button class="theme-toggle" onclick="toggleTheme()">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+      <button class="login">Log in</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="sidebar">
+      <div class="nav-icon active" title="Home">
+        <i class="fa-solid fa-house"></i>
+        <span>Home</span>
+      </div>
+      <div class="nav-icon" title="Search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <span>Search</span>
+      </div>
+      <div class="nav-icon" title="Library">
+        <i class="fa-solid fa-book"></i>
+        <span>Library</span>
+      </div>
+      <div class="nav-icon" title="Create Playlist">
+        <i class="fa-solid fa-plus"></i>
+        <span>Create Playlist</span>
+      </div>
+      <div class="nav-icon" title="Liked Songs">
+        <i class="fa-solid fa-heart"></i>
+        <span>Liked Songs</span>
+      </div>
+      <div class="nav-icon" title="Your Episodes">
+        <i class="fa-solid fa-headphones"></i>
+        <span>Your Episodes</span>
+      </div>
+      
+      <div class="playlist-section">
+        <h4>PLAYLISTS</h4>
+        <div class="playlist-item">Party Mix</div>
+        <div class="playlist-item">Relax Vibes</div>
+        <div class="playlist-item">Daily Drive</div>
+        <div class="playlist-item">Focus Time</div>
+        <div class="playlist-item">Workout Beats</div>
+        <div class="playlist-item">Chill Lounge</div>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="greeting">
+        <h1>Good afternoon</h1>
+        <div class="quick-access">
+          <button>All</button>
+          <button>Music</button>
+          <button>Podcasts</button>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-header">
+          <h2>Recently played</h2>
+          <a href="#" class="see-all">See all</a>
+        </div>
+        <div class="scroll-wrapper">
+          <div class="scroll-row" id="recentRow">
+            <div class="card">
+              <div class="card-image" style="background-image: url('https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228')">
+                <div class="play-button"><i class="fa-solid fa-play"></i></div>
+              </div>
+              <div class="card-title">Shape of You</div>
+              <div class="card-subtitle">Ed Sheeran</div>
+            </div>
+            <div class="card">
+              <div class="card-image" style="background-image: url('https://i.scdn.co/image/ab67616d00001e02a991995542d8a277b3a47d2a')">
+                <div class="play-button"><i class="fa-solid fa-play"></i></div>
+              </div>
+              <div class="card-title">Heat Waves</div>
+              <div class="card-subtitle">Glass Animals</div>
+            </div>
+            <div class="card">
+              <div class="card-image" style="background-image: url('https://i.scdn.co/image/ab67616d00001e02de437d960dda1ac0a3586d97')">
+                <div class="play-button"><i class="fa-solid fa-play"></i></div>
+              </div>
+              <div class="card-title">Bones</div>
+              <div class="card-subtitle">Imagine Dragons</div>
+            </div>
+            <div class="card">
+              <div class="card-image" style="background-image: url('https://i.scdn.co/image/ab67616d00001e02b1c4b76e23414c9f20242268')">
+                <div class="play-button"><i class="fa-solid fa-play"></i></div>
+              </div>
+              <div class="card-title">Closer</div>
+              <div class="card-subtitle">The Chainsmokers</div>
+            </div>
+            <div class="card">
+              <div class="card-image" style="background-image: url('https://i.scdn.co/image/ab67616d00001e02c8b3a98fc914270f7a3dddf7')">
+                <div class="play-button"><i class="fa-solid fa-play"></i></div>
+              </div>
+              <div class="card-title">Watermelon Sugar</div>
+              <div class="card-subtitle">Harry Styles</div>
+            </div>
+            <div class="card">
+              <div class="card-image" style="background-image: url('https://i.scdn.co/image/ab67616d00001e02e6f407c7f3a0ec98845e4431')">
+                <div class="play-button"><i class="fa-solid fa-play"></i></div>
+              </div>
+              <div class="card-title">Blinding Lights</div>
+              <div class="card-subtitle">The Weeknd</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-header">
+          <h2>Made For You</h2>
+          <a href="#" class="see-all">See all</a>
+        </div>
+        <div class="scroll-wrapper">
+          <div class="scroll-row" id="madeForYouRow">
+            <div class="card">
+              <div class="card-image" style="background-image: url('https://misc.scdn.co/liked-songs/liked-songs-640.png')">
+                <div class="play-button"><i class="fa-solid fa-play"></i></div>
+              </div>
+              <div class="card-title">Liked Songs</div>
+              <div class="card-subtitle">Playlist • 237 songs</div>
+            </div>
+            <div class="card">
+              <div class="card-image" style="background-image: url('https://seed-mix-image.spotifycdn.com/v6/img/reggae/3FVflmtQlY0P2aNf8b6SmF/en/default')">
+                <div class="play-button"><i class="fa-solid fa-play"></i></div>
+              </div>
+              <div class="card-title">Daily Mix 1</div>
+              <div class="card-subtitle">Made for you</div>
+            </div>
+            <div class="card">
+              <div class="card-image" style="background-image: url('https://seed-mix-image.spotifycdn.com/v6/img/pop/6eUKZXaKkcviH0Ku9w2n3V/en/default')">
+                <div class="play-button"><i class="fa-solid fa-play"></i></div>
+              </div>
+              <div class="card-title">Daily Mix 2</div>
+              <div class="card-subtitle">Made for you</div>
+            </div>
+            <div class="card">
+              <div class="card-image" style="background-image: url('https://seed-mix-image.spotifycdn.com/v6/img/rock/6tw6EpC9RgmSRZiZg0n22t/en/default')">
+                <div class="play-button"><i class="fa-solid fa-play"></i></div>
+              </div>
+              <div class="card-title">Daily Mix 3</div>
+              <div class="card-subtitle">Made for you</div>
+            </div>
+            <div class="card">
+              <div class="card-image" style="background-image: url('https://seed-mix-image.spotifycdn.com/v6/img/hiphop/1RyvyyTE3xzB2ZywiAwp0i/en/default')">
+                <div class="play-button"><i class="fa-solid fa-play"></i></div>
+              </div>
+              <div class="card-title">Daily Mix 4</div>
+              <div class="card-subtitle">Made for you</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-header">
+          <h2>Popular artists</h2>
+          <a href="#" class="see-all">See all</a>
+        </div>
+        <div class="scroll-wrapper">
+          <div class="scroll-row" id="artistRow">
+            <div class="artist-card">
+              <div class="artist-image" style="background-image: url('https://i.scdn.co/image/ab6761610000e5eb8ae7f2aaa9817a704a87ea36')"></div>
+              <div class="artist-name">The Weeknd</div>
+            </div>
+            <div class="artist-card">
+              <div class="artist-image" style="background-image: url('https://i.scdn.co/image/ab6761610000e5ebd8b9980db67272cb4d2c3daf')"></div>
+              <div class="artist-name">Dua Lipa</div>
+            </div>
+            <div class="artist-card">
+              <div class="artist-image" style="background-image: url('https://i.scdn.co/image/ab6761610000e5eb859e8d56c1f44a5cb5cef7d1')"></div>
+              <div class="artist-name">Taylor Swift</div>
+            </div>
+            <div class="artist-card">
+              <div class="artist-image" style="background-image: url('https://i.scdn.co/image/ab6761610000e5eb510c56f38c9fc97ee80f7256')"></div>
+              <div class="artist-name">Arijit Singh</div>
+            </div>
+            <div class="artist-card">
+              <div class="artist-image" style="background-image: url('https://i.scdn.co/image/ab6761610000e5ebc36dd9eb55fb0db4911f25dd')"></div>
+              <div class="artist-name">Sabrina Carpenter</div>
+            </div>
+            <div class="artist-card">
+              <div class="artist-image" style="background-image: url('https://i.scdn.co/image/ab6761610000e5eb5a00969a4698c3132a15fbb0')"></div>
+              <div class="artist-name">Ed Sheeran</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-header">
+          <h2>Trending now</h2>
+          <a href="#" class="see-all">See all</a>
+        </div>
+        <div class="scroll-wrapper">
+          <div class="scroll-row" id="trendingRow">
+            <div class="card">
+              <div class="card-image" style="background-image: url('https://i.scdn.co/image/ab67616d00001e02e6f407c7f3a0ec98845e4431')">
+                <div class="play-button"><i class="fa-solid fa-play"></i></div>
+              </div>
+              <div class="card-title">Blinding Lights</div>
+              <div class="card-subtitle">The Weeknd</div>
+            </div>
+            <div class="card">
+              <div class="card-image" style="background-image: url('https://i.scdn.co/image/ab67616d00001e02e1a0f3d38a7b04a8a3c002e1')">
+                <div class="play-button"><i class="fa-solid fa-play"></i></div>
+              </div>
+              <div class="card-title">Levitating</div>
+              <div class="card-subtitle">Dua Lipa</div>
+            </div>
+            <div class="card">
+              <div class="card-image" style="background-image: url('https://i.scdn.co/image/ab67616d00001e02e2111e0acf6ee0a3c0b4e9a9')">
+                <div class="play-button"><i class="fa-solid fa-play"></i></div>
+              </div>
+              <div class="card-title">Love Story</div>
+              <div class="card-subtitle">Taylor Swift</div>
+            </div>
+            <div class="card">
+              <div class="card-image" style="background-image: url('https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228')">
+                <div class="play-button"><i class="fa-solid fa-play"></i></div>
+              </div>
+              <div class="card-title">Shape of You</div>
+              <div class="card-subtitle">Ed Sheeran</div>
+            </div>
+            <div class="card">
+              <div class="card-image" style="background-image: url('https://i.scdn.co/image/ab67616d00001e02a991995542d8a277b3a47d2a')">
+                <div class="play-button"><i class="fa-solid fa-play"></i></div>
+              </div>
+              <div class="card-title">Heat Waves</div>
+              <div class="card-subtitle">Glass Animals</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="player-bar">
+    <div class="player-left">
+      <div class="now-playing">
+        <div class="song-cover" style="background-image: url('https://i.scdn.co/image/ab67616d00001e02e6f407c7f3a0ec98845e4431')"></div>
+        <div class="song-info">
+          <div class="song-title">Blinding Lights</div>
+          <div class="song-artist">The Weeknd</div>
+        </div>
+        <button class="like-button"><i class="fa-regular fa-heart"></i></button>
+      </div>
+    </div>
+    <div class="player-center">
+      <div class="player-controls">
+        <button class="control-button"><i class="fa-solid fa-shuffle"></i></button>
+        <button class="control-button"><i class="fa-solid fa-backward-step"></i></button>
+        <button class="play-button"><i class="fa-solid fa-play"></i></button>
+        <button class="control-button"><i class="fa-solid fa-forward-step"></i></button>
+        <button class="control-button"><i class="fa-solid fa-repeat"></i></button>
+      </div>
+      <div class="progress-bar">
+        <span class="time">0:30</span>
+        <div class="progress-container">
+          <div class="progress" style="width: 30%"></div>
+        </div>
+        <span class="time">3:20</span>
+      </div>
+    </div>
+    <div class="player-right">
+      <button class="control-button"><i class="fa-solid fa-microphone"></i></button>
+      <button class="control-button"><i class="fa-solid fa-list"></i></button>
+      <button class="control-button"><i class="fa-solid fa-laptop"></i></button>
+      <div class="volume-control">
+        <i class="fa-solid fa-volume-high"></i>
+        <div class="volume-slider">
+          <div class="volume-progress" style="width: 70%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark-mode');
+      document.body.classList.toggle('light-mode');
+      
+      const themeIcon = document.querySelector('.theme-toggle i');
+      if (document.body.classList.contains('dark-mode')) {
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+      } else {
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+      }
+    }
+
+    function scrollLeft(id) {
+      const container = document.getElementById(id);
+      container.scrollLeft -= 300;
+    }
+
+    function scrollRight(id) {
+      const container = document.getElementById(id);
+      container.scrollLeft += 300;
+    }
+
+    // Add active class to clicked nav item
+    document.querySelectorAll('.nav-icon').forEach(icon => {
+      icon.addEventListener('click', function() {
+        document.querySelectorAll('.nav-icon').forEach(i => i.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+
+    // Add hover effects to cards
+    document.querySelectorAll('.card, .artist-card').forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-5px)';
+      });
+      
+      card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+      });
+    });
+
+    // Play button hover effect
+    document.querySelectorAll('.card').forEach(card => {
+      const playButton = card.querySelector('.play-button');
+      
+      card.addEventListener('mouseenter', function() {
+        playButton.style.opacity = '1';
+        playButton.style.transform = 'translateY(0)';
+      });
+      
+      card.addEventListener('mouseleave', function() {
+        playButton.style.opacity = '0';
+        playButton.style.transform = 'translateY(10px)';
+      });
+    });
+  </script>
+</body>
+</html>
